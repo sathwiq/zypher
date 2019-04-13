@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 app.use("/home", homeRoutes);
-app.use("/user", userRoutes);
+app.use("/user", userRoutes);     
 app.listen(process.env.PORT || "3000",function(){
     console.log("its working");
 })
