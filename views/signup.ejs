@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <a href="http://localhost:3000/home">Home</a>
+    <form action="/user/create" method="post">
+        <input type="text" name="fname" id="" placeholder="first name">
+        
+        <input type="text" name="lname" id="" placeholder="last name">
+        <% if(id==1){ %>
+        <% if(error ){ %>
+        <p >Name is already used</p>
+        <% } else { %>
+            <p>Success</p>
+            <% } %>
+            <%}%>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

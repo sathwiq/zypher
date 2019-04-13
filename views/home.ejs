@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <% for(i=0;i<=songs.length-1;i++){  artists=songs[i].artist;for(j=0;j<=artist.length-1;j++){ %>
+        <% if(artists== artist[j].fname && artist[j].is_famous ){ %>
+            <h2>Song</h2>
+    <p> title<%=songs[i].title%></p>
+    <p> Artist <%=songs[i].artist%></p>
+    <p>Genre <%=songs[i].pop%></p>
+    <p> is famous <%=artist[j].is_famous%></p>
+    <form action="home/comments/<%= songs[i].title %> " method="post">
+        <input type="text" name="text" id="" placeholder="text">
+        <input type="text" name="fname" id="" placeholder="user name">
+        <input type="hidden" name="song" value="">
+        <button type="submit">Add coment</button>
+    </form>
+    <% if( error){ %>
+        <p>Already submitted once</p>
+    
+    <%}}} for(k=0;k<=comment.length-1;k++){ if(comment[k].stitle==songs[i].title){%>
+        <p> text<%=comment[k].text%></p>
+        <p> user <%=comment[k].fname%></p> <br> <hr>
+        <% }}  %>
+        <hr>
+        <% }  %>
+    
+<a href="http://localhost:3000/user/create">New user</a>
+</body>
+</html>
