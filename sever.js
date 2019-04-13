@@ -17,6 +17,6 @@ app.set("view engine", "ejs");
 
 app.use("/home", homeRoutes);
 app.use("/user", userRoutes);
-app.listen(3000,function(){
+app.listen(process.env.PORT || "3000",function(){
     console.log("its working");
 })
